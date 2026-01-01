@@ -28,6 +28,8 @@ interface PostInput {
   image: string; // Featured image URL
   description: string;
   contentUnits: ContentUnit[];
+  categories:string[];
+  labels:string[];
 }
 
 // Database interface (what actually gets saved)
@@ -70,7 +72,7 @@ const examplePost: PostInput = {
   title: "The Future of Blog CMS",
   slug: "future-of-blog-cms",
   description: "A deep dive into headless CMS architectures.",
-  image: "https://example.com/featured-image.jpg",
+  image: "https://firebasestorage.googleapis.com/v0/b/cms-blog-635b2.firebasestorage.app/o/blog.jpg?alt=media&token=61678072-584a-4158-9794-db141ac844aa",
   contentUnits: [
     {
       typeO: "html",
@@ -80,9 +82,12 @@ const examplePost: PostInput = {
     {
       typeO: "image",
       title: "Architecture Diagram",
-      content: "https://example.com/diagram.png"
+      content: "https://firebasestorage.googleapis.com/v0/b/cms-blog-635b2.firebasestorage.app/o/blog2.jpg?alt=media&token=66bb7da5-d97e-434c-a232-ca8073468ff1"
     }
-  ]
+  ],
+  labels: ["creativity", "writing"],
+    categories: ["cms", "blogging"]
+
 };
 
 // Execute
