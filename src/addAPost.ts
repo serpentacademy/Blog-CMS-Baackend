@@ -28,8 +28,6 @@ interface PostInput {
   image: string; // Featured image URL
   description: string;
   contentUnits: ContentUnit[];
-  categories:string[];
-  labels:string[];
 }
 
 // Database interface (what actually gets saved)
@@ -69,25 +67,18 @@ async function addPost(data: PostInput): Promise<string> {
 // You can run this file directly via: npx ts-node src/addPost.ts
 
 const examplePost: PostInput = {
-  title: "The Future of Blog CMS",
-  slug: "future-of-blog-cms",
+  title: "Witers meant to thrive",
+  slug: "writers-meant-to-thrive",
   description: "A deep dive into headless CMS architectures.",
-  image: "https://firebasestorage.googleapis.com/v0/b/cms-blog-635b2.firebasestorage.app/o/blog.jpg?alt=media&token=61678072-584a-4158-9794-db141ac844aa",
+  image: "https://firebasestorage.googleapis.com/v0/b/cms-blog-635b2.firebasestorage.app/o/blog2.jpg?alt=media&token=66bb7da5-d97e-434c-a232-ca8073468ff1",
   contentUnits: [
     {
       typeO: "html",
       title: "Introduction",
-      content: "<p>Welcome to the new era of blogging...</p>"
+      content: "<p>Writers are so strategic in the AI Era.</p>"
     },
-    {
-      typeO: "image",
-      title: "Architecture Diagram",
-      content: "https://firebasestorage.googleapis.com/v0/b/cms-blog-635b2.firebasestorage.app/o/blog2.jpg?alt=media&token=66bb7da5-d97e-434c-a232-ca8073468ff1"
-    }
-  ],
-  labels: ["creativity", "writing"],
-    categories: ["cms", "blogging"]
-
+ 
+  ]
 };
 
 // Execute
